@@ -4,6 +4,7 @@ apply plugin: 'eclipse'
 apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 
 def springVersion = '4.2.2.RELEASE'
+def springSecurityVersion = '4.0.3.RELEASE'
 
 repositories {
     mavenCentral()
@@ -17,6 +18,10 @@ dependencies {
 	compile "org.springframework:spring-tx:${springVersion}"
 	compile "org.springframework:spring-context:${springVersion}"
 	compile "org.springframework:spring-webmvc:${springVersion}"
+	
+	
+	compile "org.springframework.security:spring-security-config:${springSecurityVersion}"
+	compile "org.springframework.security:spring-security-web:${springSecurityVersion}"
 	
 	compile 'commons-io:commons-io:2.4'
 	compile "com.mangofactory:swagger-springmvc:1.0.2"
